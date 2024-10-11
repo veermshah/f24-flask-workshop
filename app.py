@@ -13,7 +13,7 @@ def list_all_languages():
     url = "https://deep-translate1.p.rapidapi.com/language/translate/v2/languages"
 
     headers = {
-        "x-rapidapi-key": "06e9fdad13msh0c03b16263635e5p1ffbfejsnb9c6d5478224",
+        "x-rapidapi-key": api_key,
         "x-rapidapi-host": "deep-translate1.p.rapidapi.com"
     }
 
@@ -29,7 +29,7 @@ def translatetext(text,l2,l1='en'):
         "target": l2
     }
     headers = {
-	"x-rapidapi-key": "06e9fdad13msh0c03b16263635e5p1ffbfejsnb9c6d5478224",
+	"x-rapidapi-key": api_key,
 	"x-rapidapi-host": "deep-translate1.p.rapidapi.com",
 	"Content-Type": "application/json"
     }
