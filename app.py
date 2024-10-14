@@ -5,10 +5,11 @@ import random
 from dotenv import load_dotenv
 import os
 
-# This loads our apikey from the variable API_KEY in the .env.local file
-api_key = os.getenv('API_KEY')
-host = "ai-translate.p.rapidapi.com"
+# Load environment variables from the .env.local file
 load_dotenv('.env.local')
+
+# Get the API key from the environment variable
+api_key = os.getenv('API_KEY')
 
 def list_all_languages():
     # We will fill this out in a second
