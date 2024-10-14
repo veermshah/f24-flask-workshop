@@ -5,9 +5,11 @@ import random
 from dotenv import load_dotenv
 import os
 
-api_key = os.getenv('API_KEY')
-host = "ai-translate.p.rapidapi.com"
+# Load environment variables from the .env.local file
 load_dotenv('.env.local')
+
+# Get the API key from the environment variable
+api_key = os.getenv('API_KEY')
 
 def list_all_languages():
     url = "https://deep-translate1.p.rapidapi.com/language/translate/v2/languages"
@@ -35,6 +37,7 @@ def translatetext(text,l2,l1='en'):
     }
 
     response = requests.post(url, json=payload, headers=headers)
+    print(response.json())
     
     return response.json()
 
